@@ -26,7 +26,7 @@ execute as @a[tag=NEWENTER] at @s run function lobby/cleartags
 title @a[tag=NEWENTER] title ["\u00a7a\u00a7lMini\u00a7e\u00a7lGames"]
 title @a[tag=NEWENTER] subtitle ["\u00a76You're in \u00a7dMain Lobby"]
 title @a[tag=NEWENTER] actionbar ["\u00a7aMade by wifi-left"]
-tellraw @a[tag=NEWENTER] ["\n\u00a7a  您可以随时使用 \u00a76/trigger hub \u00a7a返回大厅。\n  \u00a7a全局音乐可以通过\u00a76游戏设置 - 声音设置 - 玩家语音\u00a7a调节声音大小\n  \u00a7e部分游戏支持使用 \u00a76/trigger rejoin\u00a7e 重新加入退出的游戏！\n\n\u00a7b  下载资源包：",{"text":"\u00a7d\u00a7n[GitLab](推荐)","underlined": true,"clickEvent": {"action":"open_url","value": "https://gitlab.com/wifi-left/Map-MiniGames/-/raw/master/resourcepack/MiniGameRes.zip"}}," ",{"underlined": true,"text":"\u00a7e\u00a7n[GitHub](备用)","clickEvent": {"action":"open_url","value": "https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip"}},"\n"]
+tellraw @a[tag=NEWENTER] ["\n\u00a7a  您可以随时使用 \u00a76/spawn \u00a7a返回大厅。\n  \u00a7a全局音乐可以通过\u00a76游戏设置 - 声音设置 - 玩家语音\u00a7a调节声音大小\n  \u00a7e部分游戏支持使用 \u00a76/trigger rejoin\u00a7e 重新加入退出的游戏！\n\n\u00a7b  下载资源包：",{"text":"\u00a7d\u00a7n[GitLab](推荐)","underlined": true,"clickEvent": {"action":"open_url","value": "https://gitlab.com/wifi-left/Map-MiniGames/-/raw/master/resourcepack/MiniGameRes.zip"}}," ",{"underlined": true,"text":"\u00a7e\u00a7n[GitHub](备用)","clickEvent": {"action":"open_url","value": "https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip"}},"\n"]
 execute as @a[tag=NEWENTER] run attribute @s max_health base set 20
 
 gamemode adventure @a[tag=NEWENTER]
@@ -38,7 +38,7 @@ execute as @a[tag=NEWENTER] at @s run attribute @s minecraft:attack_speed base s
 execute as @a[tag=NEWENTER] run bossbar set surgame:time players @a[team=wait.sur]
 
 execute as @a[tag=NEWENTER] unless score @s park.uuid matches 0.. run function minecraft:npark/getuuid
-tellraw @a[tag=NEWENTER,tag=GOABLE.SPEC] ["\n\u00a77  你已开启\u00a7b全局旁观者模式\u00a77。\n  \u00a77",{"text":"\u00a7a\u00a7l点击此处，或者使用 \u00a76\u00a7l/trigger spec set 3 \u00a7a\u00a7l退出全局旁观者模式","bold":true,"clickEvent": {"action": "run_command","value": "/trigger spec set 3"},"hoverEvent": {"action": "show_text","contents": "\u00a7c点击此处退出全局旁观者模式"}},"\n"]
+tellraw @a[tag=NEWENTER,tag=GOABLE.SPEC] ["\n\u00a77  你已开启\u00a7b全局旁观者模式\u00a77。\n  \u00a77",{"text":"\u00a7a\u00a7l点击此处，或者使用 \u00a76\u00a7l/exit-spectator \u00a7a\u00a7l退出全局旁观者模式","bold":true,"clickEvent": {"action": "run_command","value": "/exit-spectator"},"hoverEvent": {"action": "show_text","contents": "\u00a7c点击此处退出全局旁观者模式"}},"\n"]
 effect clear @a[tag=NEWENTER]
 tag @a[tag=NEWENTER] remove zombie.nehelp
 tag @a[tag=NEWENTER] remove parkouring
@@ -58,7 +58,7 @@ execute as @a[scores={spec=4}] run function lobby/spec
 scoreboard players enable @a spec
 scoreboard players reset @a[scores={spec=1..}] spec
 tag @a[tag=SPEC.JOIN] add GOABLE.SPEC
-tellraw @a[tag=SPEC.JOIN] ["\n\u00a77  你已开启\u00a7b全局旁观者模式\u00a77。\n  \u00a77由于你进入游戏后会变为旁观模式，请使用 \u00a76/trigger hub\u00a77 返回大厅。\n  ",{"text":"\u00a7a\u00a7l点击此处，或者使用 \u00a76\u00a7l/trigger spec set 3 \u00a7a\u00a7l退出全局旁观者模式","bold":true,"clickEvent": {"action": "run_command","value": "/trigger spec set 3"},"hoverEvent": {"action": "show_text","contents": "\u00a7c点击此处退出全局旁观者模式"}},"\n"]
+tellraw @a[tag=SPEC.JOIN] ["\n\u00a77  你已开启\u00a7b全局旁观者模式\u00a77。\n  \u00a77由于你进入游戏后会变为旁观模式，请使用 \u00a76/spawn\u00a77 返回大厅。\n  ",{"text":"\u00a7a\u00a7l点击此处，或者使用 \u00a76\u00a7l/exit-spectator \u00a7a\u00a7l退出全局旁观者模式","bold":true,"clickEvent": {"action": "run_command","value": "/exit-spectator"},"hoverEvent": {"action": "show_text","contents": "\u00a7c点击此处退出全局旁观者模式"}},"\n"]
 tag @a[tag=SPEC.JOIN] remove SPEC.JOIN
 tellraw @a[tag=SPEC.REMOVE] ["\n\u00a7c  你已关闭\u00a7b全局旁观者模式\u00a77。\n"]
 tag @a[tag=SPEC.REMOVE] remove GOABLE.SPEC
@@ -136,7 +136,7 @@ execute as @a[tag=join.livelongest] run tp @s 25 7 0 0 0
 execute as @a[tag=join.livelongest] run team leave @s
 execute as @a[tag=join.livelongest] run tellraw @a ["\u00a7a\u00a7l[MESSAGE] \u00a7a",{"selector":"@s","color":"gray"},"\u00a7e joined \u00a76Live Longest \u00a7e."]
 
-tellraw @a[tag=GOABLE.SPEC,tag=join.livelongest] ["\n\u00a77  你已开启\u00a7b全局旁观者模式\u00a77。\n  \u00a77由于你进入游戏后会变为旁观模式，请使用 \u00a76/trigger hub\u00a77 返回大厅。\n  ",{"text":"\u00a7a\u00a7l点击此处，或者使用 \u00a76\u00a7l/trigger spec set 3 \u00a7a\u00a7l退出全局旁观者模式","bold":true,"clickEvent": {"action": "run_command","value": "/trigger spec set 3"},"hoverEvent": {"action": "show_text","contents": "\u00a7c点击此处退出全局旁观者模式"}},"\n"]
+tellraw @a[tag=GOABLE.SPEC,tag=join.livelongest] ["\n\u00a77  你已开启\u00a7b全局旁观者模式\u00a77。\n  \u00a77由于你进入游戏后会变为旁观模式，请使用 \u00a76/spawn\u00a77 返回大厅。\n  ",{"text":"\u00a7a\u00a7l点击此处，或者使用 \u00a76\u00a7l/exit-spectator \u00a7a\u00a7l退出全局旁观者模式","bold":true,"clickEvent": {"action": "run_command","value": "/exit-spectator"},"hoverEvent": {"action": "show_text","contents": "\u00a7c点击此处退出全局旁观者模式"}},"\n"]
 execute as @a[tag=GOABLE.SPEC,tag=join.livelongest] at @s run gamemode spectator
 execute as @a[tag=join.livelongest] run team join wait.live @s
 execute as @a[tag=join.livelongest] run tag @s remove join.livelongest

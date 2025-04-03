@@ -42,8 +42,8 @@ effect clear @a[tag=NEWENTER1]
 stopsound @a[tag=NEWENTER1] record
 stopsound @a[tag=NEWENTER1] voice
 tag @a[tag=NEWENTER1] remove mazing
-tellraw @a[tag=NEWENTER1] ["\n\u00a7a  您可以随时使用 \u00a76/trigger hub \u00a7a返回大厅。\n  \u00a7a全局音乐可以通过\u00a76游戏设置 - 声音设置 - 玩家语音\u00a7a调节声音大小\n"]
-tellraw @a[tag=NEWENTER1,tag=GOABLE.SPEC] ["\n\u00a77  你已开启\u00a7b全局旁观者模式\u00a77。\n  \u00a77",{"text":"\u00a7a\u00a7l点击此处，或者使用 \u00a76\u00a7l/trigger spec set 3 \u00a7a\u00a7l退出全局旁观者模式","bold":true,"clickEvent": {"action": "run_command","value": "/trigger spec set 3"},"hoverEvent": {"action": "show_text","contents": "\u00a7c点击此处退出全局旁观者模式"}},"\n"]
+tellraw @a[tag=NEWENTER1] ["\n\u00a7a  您可以随时使用 \u00a76/spawn \u00a7a返回大厅。\n  \u00a7a全局音乐可以通过\u00a76游戏设置 - 声音设置 - 玩家语音\u00a7a调节声音大小\n"]
+tellraw @a[tag=NEWENTER1,tag=GOABLE.SPEC] ["\n\u00a77  你已开启\u00a7b全局旁观者模式\u00a77。\n  \u00a77",{"text":"\u00a7a\u00a7l点击此处，或者使用 \u00a76\u00a7l/exit-spectator \u00a7a\u00a7l退出全局旁观者模式","bold":true,"clickEvent": {"action": "run_command","value": "/exit-spectator"},"hoverEvent": {"action": "show_text","contents": "\u00a7c点击此处退出全局旁观者模式"}},"\n"]
 execute as @a[tag=NEWENTER1] run attribute @s max_health base set 20
 execute as @a[tag=NEWENTER1] at @s run effect clear @s
 execute in overworld run tp @a[tag=NEWENTER1] 188 124 26 0 0
@@ -65,7 +65,7 @@ clear @a[tag=join.hit]
 gamemode adventure @a[tag=join.hit]
 team leave @a[tag=join.hit]
 execute as @a[tag=join.hit] run tellraw @a ["\u00a7a\u00a7l[MESSAGE] \u00a77",{"selector":"@s","color":"yellow"},"\u00a77 加入了 \u00a7eRepeling War\u00a77。"]
-tellraw @a[tag=join.hit,tag=GOABLE.SPEC] ["\n\u00a77  你已开启\u00a7b全局旁观者模式\u00a77。\n  \u00a77由于你进入游戏后会变为旁观模式，请使用 \u00a76/trigger hub\u00a77 返回大厅。\n  ",{"text":"\u00a7a\u00a7l点击此处，或者使用 \u00a76\u00a7l/trigger spec set 3 \u00a7a\u00a7l退出全局旁观者模式","bold":true,"clickEvent": {"action": "run_command","value": "/trigger spec set 3"},"hoverEvent": {"action": "show_text","contents": "\u00a7c点击此处退出全局旁观者模式"}},"\n"]
+tellraw @a[tag=join.hit,tag=GOABLE.SPEC] ["\n\u00a77  你已开启\u00a7b全局旁观者模式\u00a77。\n  \u00a77由于你进入游戏后会变为旁观模式，请使用 \u00a76/spawn\u00a77 返回大厅。\n  ",{"text":"\u00a7a\u00a7l点击此处，或者使用 \u00a76\u00a7l/exit-spectator \u00a7a\u00a7l退出全局旁观者模式","bold":true,"clickEvent": {"action": "run_command","value": "/exit-spectator"},"hoverEvent": {"action": "show_text","contents": "\u00a7c点击此处退出全局旁观者模式"}},"\n"]
 execute as @a[tag=join.hit,tag=GOABLE.SPEC] at @s run gamemode spectator
 team join wait.repel @a[tag=join.hit]
 execute as @a[tag=join.hit] at @s run attribute @s minecraft:max_health base set 20

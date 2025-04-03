@@ -33,4 +33,12 @@ aliases:
   - trigger spec set 2
   g-spec:
   - trigger spec set 4
+  quickplay:
+  - trigger quickplay $1-
+  qp:
+  - trigger quickplay $1-
+  rej:
+  - trigger rejoin
+  rejoin:
+  - trigger rejoin
 ```

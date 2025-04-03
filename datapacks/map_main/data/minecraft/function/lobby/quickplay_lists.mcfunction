@@ -26,4 +26,4 @@ function minecraft:lobby/quickplay_info {id:24,name:"Zombie Days（PVE）",color
 function minecraft:lobby/quickplay_info {id:25,name:"生存游戏",color:b}
 function minecraft:lobby/quickplay_info {id:26,name:"起床战争",color:b}
 function minecraft:lobby/quickplay_info {id:27,name:"桌游",color:b}
-tellraw @s "\n\u00a7e使用 \u00a76/trigger quickplay set <游戏ID>\u00a7b ，或者点击上方文字快速进入"
+tellraw @s "\n\u00a7e使用 \u00a76/qp set <游戏ID>\u00a7b ，或者点击上方文字快速进入"

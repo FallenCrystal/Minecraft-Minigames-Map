@@ -38,3 +38,4 @@
 ## 文档:
 
 - [Tab 兼容性](docs/tab-compatibility.md)
+- [命令别名](docs/command-aliases.md)

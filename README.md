@@ -1,53 +1,40 @@
-# wifi-left's MiniGames
-如果您想要使用此地图，请遵守：
-1. 请不要删除任何原作者信息
-2. 如果进行修改请添加明显提示
-3. 不可商用
+# Minecraft Minigames Map
 
-# 快速开始、强制进入游戏（管理员）
-详见 [QUICKPLAY.md](QUICKPLAY.md)
+原名: [wifi-left's MiniGame](https://github.com/wifi-left/Map-MiniGames)
+(也由该项目分叉而来)
 
-# 反馈BUG
-请在 GitHub Issue 或者qq群里反馈
+自用且不可商用. 
 
-# 关于对于部分插件的支持
-我尝试支持了 `ViaVersion` 以及 `Geyser` 模组。
+## 该分叉的主要目的
 
-但请不要对其抱有太大期待。很可能大部分游戏无法正常游玩。
+- 修改或删除我不想要的功能或消息 (话虽如此, 但我不会在地图中删除任何原有的credit)
+- 在Paper及其衍生分支上托管该地图 并确保修复或指出如何修复非预期行为
+- 添加有关如何增强对插件兼容性的信息到文档中
 
-# 资源包的使用
-您可以在服务器配置资源包的 GitHub / Gitea 直链达到自动下载资源包。
+## 话虽如此...
 
-Gitea 下载速度更快。
+不是什么插件或服务器软件都将被支持. (这也将适用于源地图)
 
-Gitea 的 URL 为：[https://gitea.com/wifi-left/Map-MiniGames/raw/branch/master/resourcepack/MiniGameRes.zip](https://gitea.com/wifi-left/Map-MiniGames/raw/branch/master/resourcepack/MiniGameRes.zip)
+不支持的服务器软件:
 
-GitHub 的 URL 为：[https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip](https://github.com/wifi-left/Map-MiniGames/raw/master/resourcepack/MiniGameRes.zip)
+- Folia (完全破坏了计分板队伍功能)
+- 任何声称"重写"Minecraft了功能或使其异步的Minecraft服务器软件
+- 任何闭源的服务器软件
 
-# 目前待做列表
-[To-do List](./todo.md)
+> [!TIP]
+> 如果您正在使用的服务器软件甚至包含下面两个条件. 除非出于特殊原因(如插件兼容性), 否则我绝对不会推荐它们. 并且它们有99%都是一个巨大骗局, 诱导您在服务器核心上花费数十甚至数百美元.
 
-# 服务端安装教程
-1. [教程 - 服务器建设 - Minecraft Wiki](https://zh.minecraft.wiki/w/%E6%95%99%E7%A8%8B#%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%AE%BE%E7%BD%AE)
+不支持的插件:
+- EssentialsX, CMI ~~(ess怎么你了)~~ : 这些插件覆盖了很多重要的Minecraft命令, 且不实现原版中的相同行为(如目标选择器, 实体ID) 这将导致地图完全无法工作
+- CombatLogX : 你为什么甚至需要这个?
+- 任何修改计分板的插件, 除了TAB : 这些插件的行为将导致游戏不工作或客户端显示不符合预期. 有关TAB兼容的更多信息. 请阅读文档.
+- Multiverse-Core, BKCommonLib : 干扰原版的多世界行为
+- 任何隐身插件 (如SuperVanish) : 计分板会更新玩家的信息. 这将导致数据包仍然会发送到玩家. 别有用心的人可以检查计分板变更以利用它们, 且可能导致正常玩家出现问题.
 
-请参考上述教程。
+建议安装的插件:
+- LuckPerms : 如果您正在运行中大型服务器, 这是必不可缺的. 除了您的插件需要获取权限以外, 禁用原版OP权限也可以避免您的管理员拥有您不希望他们拥有的权限, 一定程度上也可以避免无下限的滥用.
+- AntiPopup : 在您的服务器上禁用烦人的聊天报告, 并阻止"不安全的聊天"弹窗弹出.
 
-# 感谢列表
-排名不分先后
+## 文档:
 
-- 感谢 Domnick_JYH 提供的大量帮助
-- 感谢 00ɹɐəlϽ 提供的战利品表设计
-- 感谢 616789 提供的帮助
-- 感谢 lawyer112 提供的服务器支持
-- 感谢 LateTea 提供的支持
-- 感谢 Wemsur 进行的测试、反馈
-- 感谢 残月sama 提供的支持
-- 感谢 群友、地图使用者 的支持
-- 感谢 Akita丶 有偿提供的建筑
-  >
-  > 如果您有需要建筑地图的可以与他（Akita丶）联系。
-  > 
-  > MineBBS链接地址：[https://www.minebbs.com/threads/1-12-1-20-4-rpg-pvp.30597/](https://www.minebbs.com/threads/1-12-1-20-4-rpg-pvp.30597/)
-  >
-  > 本作者仅提供宣传，不保证该第三方作者的质量，如果出现问题请双方自行解决。
-  >
+- [Tab 兼容性](docs/tab-compatibility.md)

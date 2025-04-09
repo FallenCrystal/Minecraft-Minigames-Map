@@ -43,7 +43,7 @@ setblock 496 -43 -104 air
 setblock 497 -43 -104 air
 setblock 513 -43 -112 minecraft:air
 fill 527 -41 -102 527 -43 -100 minecraft:iron_bars
-setblock 513 -43 -112 minecraft:chest{Items:[{id:"minecraft:carrot_on_a_stick",count:1,components:{"minecraft:custom_data":{hp:50,gun:"pao",damage:300,bullet:380,cdtime:10,distance:40},"minecraft:custom_name":'"\\u00a7e\\u00a7kaaa\\u00a7a 高级魔法棒 \\u00a7e\\u00a7kaaa"',"minecraft:lore":['"\\u00a7b可使用次数：\\u00a7e380"','"\\u00a7bCD: \\u00a7e10tick"','"\\u00a7b伤害：\\u00a7e30.0 HP"','"\\u00a7b距离：\\u00a7e40 \\u00a7bblocks"','"\\u00a7b消耗能量：\\u00a7e50"'],"minecraft:custom_model_data":9},Slot:13},{id:"minecraft:experience_bottle",count:64,Slot:1}]}
+setblock 513 -43 -112 minecraft:chest{Items:[{id:"minecraft:carrot_on_a_stick",count:1,components:{"minecraft:custom_data":{hp:50,gun:"pao",damage:300,bullet:380,cdtime:10,distance:40},"minecraft:custom_name":'"\\u00a7e\\u00a7kaaa\\u00a7a 高级魔法棒 \\u00a7e\\u00a7kaaa"',"minecraft:lore":['"\\u00a7b可使用次数：\\u00a7e380"','"\\u00a7bCD: \\u00a7e10tick"','"\\u00a7b伤害：\\u00a7e30.0 HP"','"\\u00a7b距离：\\u00a7e40 \\u00a7bblocks"','"\\u00a7b消耗能量：\\u00a7e50"'],"minecraft:custom_model_data":{floats:[9]}},Slot:13},{id:"minecraft:experience_bottle",count:64,Slot:1}]}
 setblock 496 -43 -104 minecraft:chest[type=left]{Items:[]}
 setblock 497 -43 -104 minecraft:chest[type=right]{Items:[{id:"minecraft:tnt",count:1,Slot:0,components:{"minecraft:custom_name":'"\\u00a7c\\u00a7lTNT"',"minecraft:lore":['"\\u00a7e用于破坏地牢中的某一个墙壁"'],"minecraft:custom_data":{lock:3,flag:1}}},{id:"minecraft:tnt",count:1,Slot:1,components:{"minecraft:custom_name":'"\\u00a7c\\u00a7lTNT"',"minecraft:lore":['"\\u00a7e用于破坏地牢中的某一个墙壁"'],"minecraft:custom_data":{lock:3,flag:2}}}]}
 kill @e[type=villager,tag=pve.npc]
